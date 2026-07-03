@@ -84,6 +84,46 @@ body.dark-theme {
   border-radius: var(--radius-lg);
 }
 
+.top-link {
+  flex: 0 1 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 13px 16px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #eef3fb, #dde7f4);
+  color: #1f2d42;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, opacity 0.18s ease;
+  box-shadow: 0 8px 18px rgba(31, 45, 66, 0.08);
+}
+
+.top-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(31, 45, 66, 0.12);
+}
+
+.top-link:focus-visible {
+  outline: 3px solid rgba(31, 94, 255, 0.28);
+  outline-offset: 2px;
+}
+
+.top-link-primary {
+  background: linear-gradient(135deg, var(--primary), #2352d8);
+  color: #ffffff;
+  box-shadow: 0 10px 22px rgba(31, 94, 255, 0.16);
+}
+
+.top-link-primary:hover {
+  background: linear-gradient(135deg, var(--primary-hover), #1d44b5);
+}
+
 .container {
   position: relative;
   overflow: hidden;
@@ -127,6 +167,14 @@ h1 {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 0 0 8px;
+  text-align: center;
+  color: var(--text-soft);
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .formula-helper {
@@ -293,6 +341,20 @@ body.dark-theme button:not(#calculateButton):not(#clearHistoryButton) {
   background: linear-gradient(135deg, #d8e2f3, #c6d3e6);
   color: #132238;
   border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .top-link {
+  background: linear-gradient(135deg, #d8e2f3, #c6d3e6);
+  color: #132238;
+}
+
+body.dark-theme .top-link-primary {
+  background: linear-gradient(135deg, #7aa2ff, #4f7fff);
+  color: #081427;
+}
+
+body.dark-theme .top-link-primary:hover {
+  background: linear-gradient(135deg, #93b2ff, #6792ff);
 }
 
 body.dark-theme .input-row select {
@@ -501,6 +563,7 @@ button[onclick='clearFields()']:hover {
   }
 
   .top-container button,
+  .top-container a,
   .container > div button {
     flex: 1 1 100%;
     width: 100%;

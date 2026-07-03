@@ -265,10 +265,6 @@ function clearFields() {
   validateInputs();
 }
 
-function redirectToLink() {
-  window.location.href = 'https://chemistryhub.carrd.co/';
-}
-
 function calculateAndRender() {
   const values = getInputValues();
   const validation = validateInputs(values);
@@ -337,7 +333,6 @@ molarMassInput.addEventListener('input', () => {
   validateInputs();
   formMessage.textContent = '';
 });
-document.getElementById('redirectButton').addEventListener('click', redirectToLink);
 clearHistoryButton.addEventListener('click', clearHistory);
 calculateButton.addEventListener('click', calculateAndRender);
 
